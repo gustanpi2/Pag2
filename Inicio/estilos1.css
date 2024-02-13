@@ -1,0 +1,328 @@
+body::before {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: auto;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+body{
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin: 0;
+}
+
+header h1 {
+    font-size: 45px;
+    color: #BFD2F8;
+    background-color: white;
+    margin: 0;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: #BFD2F8;
+    margin: 0;
+}
+
+.segundo-header{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    margin: 0;
+    font-size: 45px;
+    color: white;
+    background-color: #233bc7;
+
+}
+
+form {
+    text-align: center;
+    margin: auto;
+}
+
+form button {
+    padding: 10px;
+    background: linear-gradient(
+        90deg,
+        rgb(66, 66, 197) 0%, /* Tono más oscuro */
+        rgb(61, 61, 163) 100% /* Tono más claro */
+    );
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: rgb(105, 105, 175); /* Cambia el tono más claro en hover */
+}
+
+.opciones {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.opciones h2 {
+    color: black;
+    font-size: 26px;
+    text-align: center;
+}
+
+.contactos{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.contactos h2 {
+    color: black;
+    font-size: 26px;
+    text-align: center;
+}
+
+.icono-btn {
+    background-color: #355691; /* Color de fondo */
+    color: #A7CCED; /* Color del texto */
+    border: none;
+    border-radius: 50%; /* Hace que el botón sea redondeado */
+    font-size: 10px;
+    padding: 15px;
+    margin: 10px; /* Espaciado entre botones */
+    cursor: pointer;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.icono-btn:hover {
+    background-color: #192BC2; /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para el contenedor de la información del usuario */
+.info-usuario-container {
+    display: none;
+    position: absolute;
+    top: 50px; /* Ajusta la posición según sea necesario */
+    right: 20px; /* Ajusta la posición según sea necesario */
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    border-radius: 25px;
+}
+
+/* Estilos para el botón de usuario */
+#btnUsuario {
+    padding: 10px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%, 
+        rgba(128, 0, 0, 1) 100%
+    );
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+#btnUsuario:hover {
+    background: rgba(128, 0, 0, 1);
+
+}
+
+.imagen-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden; /* Para asegurar que la imagen no sobresalga del contenedor */
+}
+
+.imagen-container img {
+    width: 100%; /* Ocupa todo el espacio horizontal */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: cover;
+}
+.contenedor {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: -250px;
+}
+
+.lado-izquierdo {
+    flex: 1;
+}
+
+.lado-izquierdo img {
+    width: 100%;
+    height: auto;
+}
+
+.lado-derecho {
+    flex: 1;
+    padding: 20px; /* Ajusta el relleno según sea necesario */
+}
+
+.lado-derecho h1 {
+    font-size: 30px;
+    color: #BFD2F8;
+    text-align: center;
+}
+
+.lado-derecho p {
+    font-size: 40px;
+    color: #233bc7;
+    text-align: center;
+}
+
+.lado-derecho ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 3fr); /* Divide la lista en 3 columnas */
+    grid-gap: 10px; /* Ajusta el espacio entre elementos según sea necesario */
+}
+
+.lado-derecho li {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 8px; /* Ajusta el margen según sea necesario */
+    position: relative;
+    padding-left: 15px; /* Espacio para el punto */
+}
+
+.lado-derecho li::before {
+    content: '\2022'; /* Agrega un punto utilizando el código de carácter Unicode */
+    color: red; /* Color del punto */
+    position: absolute;
+    left: 0;
+}
+.recuadros-container{
+    display: flex; /* Establece el contenedor como un contenedor flexible */
+    justify-content: space-around;
+}
+.boton-cuadro {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px
+}
+
+.boton-cuadro:hover {
+    transform: scale(1.1);
+}
+
+.boton-cuadro h3 {
+    margin: 10px 0; /* Espaciado en la parte superior e inferior del texto */
+}
+
+.boton-cuadro i {
+    font-size: 24px; /* Ajusta el tamaño del icono según tus necesidades */
+}
+
+.boton-cuadro p {
+    margin: 10px 0; /* Espaciado en la parte superior e inferior del texto */
+}
+
+#cuadro1{
+    background-color:#BFD2F8 ;
+    color: #233bc7;
+}
+#cuadro2{
+    background-color:#233bc7 ;
+    color: #BFD2F8;
+}
+#cuadro3{
+    background-color: #BFD2F8;
+    color: #233bc7;
+}
+#cuadro4{
+    background-color:#BFD2F8 ;
+    color: #233bc7;
+}
+
+footer {
+    background-color: #233bc7; /* Cambié el color a uno similar al segundo-header */
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Centro los elementos verticalmente */
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px; /* Añadí un margen para separar las secciones */
+    text-align: left; /* Alineo el texto a la izquierda */
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 15px; /* Añadí margen inferior para separar el título del contenido */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #bbb; /* Cambié el color al hacer hover */
+}
+
+.footer-line {
+    width: 100%;
+    border-top: 1px solid #bbb;
+    margin: 20px 0;
+    padding-top: 3px;
+}
